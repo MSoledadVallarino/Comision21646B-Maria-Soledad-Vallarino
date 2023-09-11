@@ -1,10 +1,12 @@
 import express from "express";
-import { postRouter } from "./src/routes/post.routes";
+import { postRouter } from "./src/routes/post.routes.js";
+import { startDatabase } from "./src/config/database.js";
+
 const app = express();
 app.use(express.json())
 
 const port = 3000;
-app.use("/", taskRouter)
+app.use("/", postRouter)
 
 
 app.listen(port, () => {

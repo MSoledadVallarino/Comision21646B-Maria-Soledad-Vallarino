@@ -1,6 +1,5 @@
 import { Router } from "express";
-import { ctrlCreatePost, ctrlDeletePost, ctrlGetPost, ctrlUpdatePost } from "../controllers/task.controllers.js";
-
+import { ctrlGetPost, ctrlCreatePost, ctrlUpdatePost, ctrlDeletePost } from "../controllers/post.controllers.js"; 
 const postRouter = Router();
 
 // endpoint para traer todas las tareas
