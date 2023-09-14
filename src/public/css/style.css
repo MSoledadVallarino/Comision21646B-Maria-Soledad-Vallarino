@@ -2,6 +2,23 @@ body{
     background-color: teal;
 } 
 .card-img-top{
-    height: 250px;
+    height: 300px;
+    width: 20rm;
     object-fit: cover;
+}
+.btn-new{
+    background-color: rgb(247, 13, 247);
+  border: solid;
+  color: black;
+  border-radius: 10%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block ;
+  font-size: 30px;
+ 
+}
+
+.d-flex {
+    font-family: 'Oleo Script', cursive;
 }

@@ -66,7 +66,7 @@ form.addEventListener("submit", (event) => {
     const newPost = {
       title: inputTitle.value,
       content: inputContent.value,
-      linkUrlEdit: inputLinkUrl.value,
+      linkUrl: inputLinkUrl.value,
     };
 
     fetch('http://localhost:3000/api/posts', {
@@ -92,7 +92,7 @@ form.addEventListener("submit", (event) => {
     const newPost = {
       title: inputTitle.value,
       content: inputContent.value,
-      linkUrlEdit: inputLinkUrl.value,
+      linkUrl: inputLinkUrl.value,
     };
 
     fetch(`http://localhost:3000/api/posts/${idForm}`, {
