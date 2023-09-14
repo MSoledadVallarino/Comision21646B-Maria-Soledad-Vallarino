@@ -1,10 +1,10 @@
 import express from "express";
 import { postRouter } from "./src/routes/post.routes.js";
 import { startDatabase } from "./src/config/database.js";
-import path from "node:path";
+import path from "node:path"
 import cors from "cors"
 import morgan from 'morgan';
-import helmet from 'helmet';
+import helmet from 'helmet'
 import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url) 
@@ -21,7 +21,7 @@ app.use(helmet({
     contentSecurityPolicy: false
 }))
 
-app.use(express.static(path.join(__dirname, "src", "public")))
+app.use(express.static(path.join(__dirname + "/src/public")))
 
 
 app.set('view', path.join(__dirname, "src", "view"))
