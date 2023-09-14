@@ -21,10 +21,10 @@ app.use(helmet({
     contentSecurityPolicy: false
 }))
 
-app.use(express.static(path.join(__dirname + "/src/public")))
+app.use(express.static(path.join(__dirname, "src", "public")))
 
 
-app.set('view', path.join(__dirname, "src", "view"))
+app.set('views', path.join(__dirname, "src", "view"))
 app.set('view engine', 'ejs');
 
 
@@ -34,6 +34,6 @@ app.use("/", postRouter)
 
 
 app.listen(port, () => {
-    console.log(`Servidor escuchando en http//:localhost:${port}`)
+    console.log(`Servidor escuchando en http://localhost:${port}/posts`)
     startDatabase()
 })

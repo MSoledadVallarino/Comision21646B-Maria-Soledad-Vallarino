@@ -10,11 +10,11 @@ let idForm = "";
 
 const inputTitle = document.getElementById("inputTitle");
 const inputContent = document.getElementById("inputContent");
-const inputLinkUrl = document.getElementByID("inputLinkUrl");
+const inputLinkUrl = document.getElementById("inputLinkUrl");
 
 btnCrear.addEventListener("click", () => {
   option = "new";
-  btnSave.textContent = "new";
+  btnSave.textContent = "Nuevo";
   inputTitle.value = "";
   inputContent.value = "";
   inputLinkUrl.value = "";
@@ -46,14 +46,14 @@ document.addEventListener("click", (event) => {
     const idArticle = article.dataset.id;
     const linkUrlEdit = article.children[0].children[0].src;
     const titleEdit = article.children[0].children[1].children[0].textContent;
-    const contenEdit = article.children[0].children[1].children[1].textContent;
+    const contentEdit = article.children[0].children[1].children[1].textContent;
 
     idForm = idArticle;
     inputTitle.value = titleEdit;
-    inputContent.value = descriptionEdit;
-    inputLinkUrl.value = urlPosterEdit;
+    inputContent.value = contentEdit;
+    inputLinkUrl.value = linkUrlEdit;
     option = "edit";
-    btnSave.textContent = "Edit";
+    btnSave.textContent = "Editar";
     myModal.show();
   }
 });
@@ -65,8 +65,8 @@ form.addEventListener("submit", (event) => {
   if (option === "new") {
     const newPost = {
       title: inputTitle.value,
-      description: inputContent.value,
-      poster: inputLinkUrl.value,
+      content: inputContent.value,
+      linkUrlEdit: inputLinkUrl.value,
     };
 
     fetch('http://localhost:3000/api/posts', {
@@ -91,11 +91,11 @@ form.addEventListener("submit", (event) => {
   if (option === "edit") {
     const newPost = {
       title: inputTitle.value,
-      description: inputContent.value,
-      poster: inputLinkUrl.value,
+      content: inputContent.value,
+      linkUrlEdit: inputLinkUrl.value,
     };
 
-    fetch(`http://localhost:3000/api/tasks/${idForm}`, {
+    fetch(`http://localhost:3000/api/posts/${idForm}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
