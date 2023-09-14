@@ -5,7 +5,7 @@ import { PostModel } from "../models/Posts.js";
 export const ctrlView =  async (req, res) => {
     try {
         const posts = await PostModel.findAll();
-        res.render('index.ejs', {posts})
+        res.render('index.ejs', {posts});
 
 } catch (error) {
         console.error(error)

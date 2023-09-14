@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, "src", "public")))
 app.set('view', path.join(__dirname, "src", "view"))
 app.set('view engine', 'ejs');
 
+
 const port = 3000;
 
 app.use("/", postRouter)
