@@ -2,9 +2,11 @@ body{
     background-color: teal;
 } 
 .card-img-top{
-    height: 300px;
-    width: 20rm;
+    min-height: 300px;
+    min-width: 24rm;
     object-fit: cover;
+    
+    
 }
 .btn-new{
     background-color: rgb(247, 13, 247);

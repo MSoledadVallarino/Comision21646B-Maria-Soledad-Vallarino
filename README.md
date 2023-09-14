@@ -20,4 +20,6 @@ Creacion de un foro, que debe permitir agregar, leer, actualizar y eliminar post
 <ul>Base de datos
 "db_tasks" con mysql
 </ul>
+
+<p>Aclaraciones: no pude incorporar las variables de entorno con dotenv porque se me rompia el programa. </p>
 </div>
